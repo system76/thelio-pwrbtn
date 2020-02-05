@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 '''
     A python script example to create plot files to build a board:
@@ -89,9 +89,9 @@ for layer_info in plot_plan:
 
     pctl.SetLayer(layer_info[1])
     pctl.OpenPlotfile(layer_info[0], PLOT_FORMAT_GERBER, layer_info[2])
-    print 'plot %s' % pctl.GetPlotFileName()
+    print('plot %s' % pctl.GetPlotFileName())
     if pctl.PlotLayer() == False:
-        print "plot error"
+        print("plot error")
 
 #generate internal copper layers, if any
 lyrcnt = board.GetCopperLayerCount()
@@ -101,9 +101,9 @@ for innerlyr in range ( 1, lyrcnt-1 ):
     pctl.SetLayer(innerlyr)
     lyrname = board.GetLayerName(innerlyr)
     pctl.OpenPlotfile(lyrname, PLOT_FORMAT_GERBER, "inner")
-    print 'plot %s' % pctl.GetPlotFileName()
+    print('plot %s' % pctl.GetPlotFileName())
     if pctl.PlotLayer() == False:
-        print "plot error"
+        print("plot error")
 
 
 # At the end you have to close the last plot, otherwise you don't know when
@@ -128,5 +128,5 @@ drlwriter.SetFormat( metricFmt )
 
 genDrl = True
 genMap = False
-print 'create drill and map files in %s' % pctl.GetPlotDirName()
+print('create drill and map files in %s' % pctl.GetPlotDirName())
 drlwriter.CreateDrillandMapFilesSet( pctl.GetPlotDirName(), genDrl, genMap )
