@@ -7,6 +7,17 @@ SRC=\
 	script/*
 
 PLOT=\
+	build/thelio-fan-female-CuBottom.gbr \
+	build/thelio-fan-female-MaskBottom.gbr \
+	build/thelio-fan-female-PasteBottom.gbr \
+	build/thelio-fan-female-SilkBottom.gbr \
+	build/thelio-fan-female-CuTop.gbr \
+	build/thelio-fan-female-MaskTop.gbr \
+	build/thelio-fan-female-PasteTop.gbr \
+	build/thelio-fan-female-SilkTop.gbr \
+	build/thelio-fan-female-EdgeCuts.gbr \
+	build/thelio-fan-female-PTH.drl \
+	build/thelio-fan-female-NPTH.drl \
 	build/thelio-fan-male-CuBottom.gbr \
 	build/thelio-fan-male-MaskBottom.gbr \
 	build/thelio-fan-male-PasteBottom.gbr \
@@ -42,6 +53,7 @@ PLOT=\
 	build/thelio-pwrbtn-male-NPTH.drl
 
 STEP=\
+	build/thelio-fan-female.step \
 	build/thelio-fan-male.step \
 	build/thelio-pwrbtn-female.step \
 	build/thelio-pwrbtn-male.step
